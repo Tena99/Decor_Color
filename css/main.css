@@ -67,17 +67,22 @@ body {
 .container {
   max-width: 1200px;
   margin: auto;
+  padding: 0 15px;
 }
 
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
+  position: absolute;
+  width: 100%;
 }
 header .navbar {
   margin: auto;
   width: 100%;
+}
+header .navbar .container-fluid {
+  max-width: 1200px;
 }
 header .navbar h5 {
   color: white;
@@ -156,6 +161,64 @@ header .offcanvas .offcanvas-header {
     justify-content: space-between;
     flex-direction: column;
   }
+}
+
+main .main_banner {
+  display: flex;
+  flex-direction: column;
+  background-image: url("/images/main_banner_background.jpg");
+  background-size: cover;
+  padding-bottom: 34px;
+}
+main .main_banner h1 {
+  font-family: "Gothic A1", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 56px;
+  line-height: 130%;
+  color: #FFFFFF;
+  text-shadow: 0px 0px 166px #000000;
+  margin-top: 160px;
+  margin-bottom: 30px;
+}
+main .main_banner .main_banner_item {
+  display: flex;
+  padding: 35px 33px;
+  background: #FFFFFF;
+  opacity: 0.9;
+  border-radius: 20px;
+  margin-bottom: 100px;
+}
+main .main_banner .main_banner_item .img-fluid {
+  margin-right: 28px;
+  padding: 8px 0;
+}
+main .main_banner .main_banner_item p {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 150%;
+  color: #000000;
+  max-width: 374px;
+  margin: 0;
+}
+
+.btn, .btn-primary {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 150%;
+  max-width: 260px;
+  padding: 20px 48px;
+  background: linear-gradient(90deg, #4C6071 0%, #55BDEA 100%);
+  box-shadow: 0 0 166px rgba(0, 0, 0, 0.2), 8px 8px 109px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  border-color: #5c5e5e;
+}
+.btn:hover, .btn-primary:hover {
+  border-color: #3e3c3c;
 }
 
 /*# sourceMappingURL=main.css.map */
