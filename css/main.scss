@@ -391,6 +391,69 @@ main {
     }
   }
   }
+
+  //----------------------------------------------------------------------------------------------------------------------------------------//
+  // Why us
+  // ---------------------------------------------------------------------------------------------------------------------------------------//
+
+  .why_us {
+    background-image: url("/images/why_us_background.png");
+    background-size: cover;
+    padding: 60px 0;
+
+    .wrapper {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    h3 {
+      font-family: 'Gothic A1', sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 130%;
+      color: #FFFFFF;
+      margin-left: 95px;
+      margin-bottom: 70px;
+    }
+
+    article {
+      padding: 50px 30px;
+      background-color: white;
+      border-radius: 20px;
+      max-width: 255px;
+
+      .img-fluid {
+        max-width: 62px;
+        margin: auto;
+
+        img {
+          display: block;
+          width: 100%
+        }
+      }
+
+      h4 {
+        font-family: 'Roboto', sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 150%;
+        color: #373737;
+        margin-top: 50px;
+      }
+
+      p {
+        font-family: 'Roboto', sans-serif;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 150%;
+        color: #373737;
+        margin:  0
+      }
+    }
+  }
 }
 
 
