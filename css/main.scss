@@ -8,6 +8,14 @@
   }
 }
 
+$maxWidth: 1280;
+
+@mixin adaptive-font($pcSize, $mobSize) {
+  $addSize: $pcSize - $mobSize;
+  $maxWidth: $maxWidth - 320;
+  font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+}
+
 /* ------------------------------------------------------------------------------------------------------------------ */
 /*                                                                          Fonts                                                                                        */
 /* ----------------------------------------------------------------------------------------------------------------- */
@@ -163,6 +171,13 @@ header {
           padding: 5px
         }
 
+        a {
+          &:hover {
+            color: #56BCE8;
+            text-decoration: underline;
+          }
+        }
+
         a,
         span {
           color: white;
@@ -224,16 +239,17 @@ main {
       font-family: 'Gothic A1', sans-serif;
       font-style: normal;
       font-weight: 600;
-      font-size: 56px;
       line-height: 130%;
       color: #FFFFFF;
       text-shadow: 0px 0px 166px #000000;
       margin-top: 160px;
       margin-bottom: 30px;
+      @include adaptive-font(56, 28)
     }
 
 .main_banner_item {
-display: flex;
+  display: flex;
+  align-items: center;
   padding: 35px 33px;
   background: #FFFFFF;
   opacity: 0.9;
@@ -249,11 +265,15 @@ display: flex;
     font-family: 'Roboto', sans-serif;
     font-style: normal;
     font-weight: 500;
-    font-size: 20px;
     line-height: 150%;
     color: #000000;
     max-width: 374px;
     margin: 0;
+
+    @include adaptive-font(20, 16);
+  }
+  @include max-screen(414px) {
+    margin-bottom: 65px;
   }
 }
   }
@@ -274,5 +294,11 @@ display: flex;
 
   &:hover {
     border-color: #3e3c3c;
+  }
+
+  @include max-screen(414px) {
+    display: flex;
+    justify-content: center;
+    margin: auto;
   }
 }

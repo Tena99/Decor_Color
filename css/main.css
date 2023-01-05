@@ -120,6 +120,10 @@ header .header_item ul li {
     padding: 5px;
   }
 }
+header .header_item ul li a:hover {
+  color: #56BCE8;
+  text-decoration: underline;
+}
 header .header_item ul li a,
 header .header_item ul li span {
   color: white;
@@ -174,15 +178,16 @@ main .main_banner h1 {
   font-family: "Gothic A1", sans-serif;
   font-style: normal;
   font-weight: 600;
-  font-size: 56px;
   line-height: 130%;
   color: #FFFFFF;
   text-shadow: 0px 0px 166px #000000;
   margin-top: 160px;
   margin-bottom: 30px;
+  font-size: calc(28px + 28 * ((100vw - 320px) / 960));
 }
 main .main_banner .main_banner_item {
   display: flex;
+  align-items: center;
   padding: 35px 33px;
   background: #FFFFFF;
   opacity: 0.9;
@@ -197,11 +202,16 @@ main .main_banner .main_banner_item p {
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 500;
-  font-size: 20px;
   line-height: 150%;
   color: #000000;
   max-width: 374px;
   margin: 0;
+  font-size: calc(16px + 4 * ((100vw - 320px) / 960));
+}
+@media screen and (max-width: 414px) {
+  main .main_banner .main_banner_item {
+    margin-bottom: 65px;
+  }
 }
 
 .btn, .btn-primary {
@@ -219,6 +229,13 @@ main .main_banner .main_banner_item p {
 }
 .btn:hover, .btn-primary:hover {
   border-color: #3e3c3c;
+}
+@media screen and (max-width: 414px) {
+  .btn, .btn-primary {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
