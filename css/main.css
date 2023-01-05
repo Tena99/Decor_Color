@@ -60,10 +60,6 @@
   padding: 0;
 }
 
-body {
-  background: grey;
-}
-
 .container {
   max-width: 1200px;
   margin: auto;
@@ -194,6 +190,11 @@ main .main_banner .main_banner_item {
   border-radius: 20px;
   margin-bottom: 100px;
 }
+@media screen and (max-width: 414px) {
+  main .main_banner .main_banner_item {
+    padding: 20px 20px;
+  }
+}
 main .main_banner .main_banner_item .img-fluid {
   margin-right: 28px;
   padding: 8px 0;
@@ -213,8 +214,7 @@ main .main_banner .main_banner_item p {
     margin-bottom: 65px;
   }
 }
-
-.btn, .btn-primary {
+main .btn, main .btn-primary {
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -227,14 +227,96 @@ main .main_banner .main_banner_item p {
   border-radius: 10px;
   border-color: #5c5e5e;
 }
-.btn:hover, .btn-primary:hover {
+main .btn:hover, main .btn-primary:hover {
   border-color: #3e3c3c;
 }
 @media screen and (max-width: 414px) {
-  .btn, .btn-primary {
+  main .btn, main .btn-primary {
     display: flex;
     justify-content: center;
     margin: auto;
+  }
+}
+main .about_us {
+  background: url("/images/about_us_background.svg") no-repeat;
+  background-size: contain;
+  padding-top: 260px;
+  padding-bottom: 156px;
+}
+@media screen and (max-width: 992px) {
+  main .about_us {
+    padding-top: 160px;
+    padding-bottom: 75px;
+  }
+}
+@media screen and (max-width: 414px) {
+  main .about_us {
+    padding-top: 100px;
+    padding-bottom: 50px;
+  }
+}
+main .about_us .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media screen and (max-width: 992px) {
+  main .about_us .container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+main .about_us article {
+  max-width: 385px;
+  margin-right: 80px;
+}
+@media screen and (max-width: 992px) {
+  main .about_us article {
+    order: 2;
+    max-width: 770px;
+    margin: 0;
+  }
+}
+main .about_us article h3 {
+  font-family: "Gothic A1", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+  margin-bottom: 60px;
+  font-size: calc(20px + 4 * ((100vw - 320px) / 960));
+}
+@media screen and (max-width: 992px) {
+  main .about_us article h3 {
+    margin-bottom: 30px;
+  }
+}
+main .about_us article p {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 150%;
+  font-size: calc(16px + 4 * ((100vw - 320px) / 960));
+}
+main .about_us article p strong {
+  font-family: Manrope, sans-serif;
+  font-weight: 600;
+}
+main .about_us .img-fluid {
+  position: absolute;
+  right: 0;
+}
+main .about_us .img-fluid img {
+  width: 100%;
+}
+@media screen and (max-width: 1200px) {
+  main .about_us .img-fluid {
+    position: relative;
+  }
+}
+@media screen and (max-width: 992px) {
+  main .about_us .img-fluid {
+    order: 1;
+    margin-bottom: 30px;
   }
 }
 
