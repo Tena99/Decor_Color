@@ -7,6 +7,12 @@
     @content;
   }
 }
+@mixin min-screen($res) {
+  @media screen and (min-width: $res) {
+    @content;
+  }
+}
+
 
 $maxWidth: 1280;
 
@@ -427,6 +433,11 @@ main {
     .wrapper {
       display: flex;
       justify-content: space-around;
+      flex-wrap: wrap;
+
+      @include max-screen(1200px) {
+        justify-content: space-evenly;
+      }
     }
 
     h3 {
@@ -438,13 +449,22 @@ main {
       color: #FFFFFF;
       margin-left: 95px;
       margin-bottom: 70px;
+
+      @include max-screen(575px) {
+        margin-left:  0;
+        text-align: center;
+      }
     }
 
     article {
       padding: 50px 30px;
       background-color: white;
       border-radius: 20px;
-      max-width: 255px;
+      margin: 10px;
+
+      @include min-screen(1200px) {
+        max-width: 255px;
+      }
 
       .img-fluid {
         max-width: 62px;

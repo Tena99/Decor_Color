@@ -350,6 +350,12 @@ main .main_banner .main_banner_item p {
 .why_us .wrapper {
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 1200px) {
+  .why_us .wrapper {
+    justify-content: space-evenly;
+  }
 }
 .why_us h3 {
   font-family: "Gothic A1", sans-serif;
@@ -361,11 +367,22 @@ main .main_banner .main_banner_item p {
   margin-left: 95px;
   margin-bottom: 70px;
 }
+@media screen and (max-width: 575px) {
+  .why_us h3 {
+    margin-left: 0;
+    text-align: center;
+  }
+}
 .why_us article {
   padding: 50px 30px;
   background-color: white;
   border-radius: 20px;
-  max-width: 255px;
+  margin: 10px;
+}
+@media screen and (min-width: 1200px) {
+  .why_us article {
+    max-width: 255px;
+  }
 }
 .why_us article .img-fluid {
   max-width: 62px;
