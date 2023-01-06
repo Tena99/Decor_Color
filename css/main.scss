@@ -10,10 +10,15 @@
 
 $maxWidth: 1280;
 
-@mixin adaptive-font($pcSize, $mobSize) {
-  $addSize: $pcSize - $mobSize;
+@mixin adaptive-font($maxSize, $minSize) {
+  $addSize: $maxSize - $minSize;
+  font-size: calc(#{$minSize + px} + #{$addSize} * ((100vw) / #{$maxWidth}));
+}
+
+@mixin adaptive-font-min($maxSize, $minSize) {
+  $addSize: $maxSize - $minSize;
   $maxWidth: $maxWidth - 320;
-  font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+  font-size: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
 }
 
 /* ------------------------------------------------------------------------------------------------------------------ */
@@ -230,7 +235,7 @@ main {
   .main_banner {
     display: flex;
     flex-direction: column;
-    background-image: url("/images/main_banner_background.jpg");
+    background-image: url(../images/main_banner_background.jpg);
     background-size: cover;
     padding-bottom: 34px;
 
@@ -243,7 +248,11 @@ main {
       text-shadow: 0px 0px 166px #000000;
       margin-top: 160px;
       margin-bottom: 30px;
-      @include adaptive-font(56, 28)
+      @include adaptive-font(56, 28);
+
+      @include max-screen(767px) {
+        @include adaptive-font-min(56,28)
+      }
     }
 
 .main_banner_item {
@@ -274,6 +283,12 @@ main {
     margin: 0;
 
     @include adaptive-font(20, 16);
+
+    @include max-screen(767px) {
+      @include adaptive-font-min(20,16)
+    }
+  }
+
   }
   @include max-screen(414px) {
     margin-bottom: 65px;
@@ -311,7 +326,7 @@ main {
   // ---------------------------------------------------------------------------------------------------------------------------------------//
 
 .about_us {
-  background: url("/images/about_us_background.svg") no-repeat;
+  background: url(../images/about_us_background.svg) no-repeat;
   background-size: contain;
   padding-top: 260px;
   padding-bottom: 156px;
@@ -358,6 +373,10 @@ main {
       @include max-screen(992px) {
         margin-bottom: 30px;
       }
+
+      @include max-screen(767px) {
+        @include adaptive-font-min(24,20)
+      }
     }
 
     p {
@@ -366,6 +385,10 @@ main {
       font-weight: 300;
       line-height: 150%;
       @include adaptive-font(20, 16);
+
+      @include max-screen(767px) {
+        @include adaptive-font-min(20,16)
+      }
 
       strong {
         font-family: Manrope, sans-serif;
@@ -397,7 +420,7 @@ main {
   // ---------------------------------------------------------------------------------------------------------------------------------------//
 
   .why_us {
-    background-image: url("/images/why_us_background.png");
+    background-image: url(../images/why_us_background.png);
     background-size: cover;
     padding: 60px 0;
 
@@ -454,7 +477,7 @@ main {
       }
     }
   }
-}
+
 
 
 
