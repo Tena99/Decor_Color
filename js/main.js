@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    $(".owl-carousel").owlCarousel({
+    $(".owl-one").owlCarousel({
         items: 1,
         loop: true,
         autoplay: true,
@@ -15,5 +15,14 @@ $(document).ready(function(){
                 items: 2
             },
         }
+    });
+});
+
+$(document).ready(function(){
+    $(".owl-two").owlCarousel({
+        items: 1,
+        nav: true,
+        dots: false,
+        navText: ["Назад", "Вперед"],
     });
 });
