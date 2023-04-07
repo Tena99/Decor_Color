@@ -74,5 +74,13 @@ btn.addEventListener("click", function () {
     selectedOption[`question_${i++}`] = textInput.value;
   });
 
+  let title = document.querySelector(".question_title");
+  let body = document.querySelector(".question_body");
+  title.style = "display:none";
+  body.style = "padding: 0";
+  body.style.backgroundImage = 'url("./images/questions_photo_7.jpg")';
+  body.style.backgroundSize = "cover";
+  body.style.backgroundPosition = "center";
+
   console.log(selectedOption);
 });
