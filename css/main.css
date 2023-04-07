@@ -117,7 +117,7 @@ header .header_item ul li {
   }
 }
 header .header_item ul li a:hover {
-  color: #56BCE8;
+  color: #56bce8;
   text-decoration: underline;
 }
 header .header_item ul li a,
@@ -175,7 +175,7 @@ main .main_banner h1 {
   font-style: normal;
   font-weight: 600;
   line-height: 130%;
-  color: #FFFFFF;
+  color: #ffffff;
   text-shadow: 0px 0px 166px #000000;
   margin-top: 160px;
   margin-bottom: 30px;
@@ -183,14 +183,16 @@ main .main_banner h1 {
 }
 @media screen and (max-width: 767px) {
   main .main_banner h1 {
-    font-size: calc(28px + 28 * ((100vw - 320px) / 960));
+    font-size: calc(
+    28px + 28 * ((100vw - 320px) / 960)
+  );
   }
 }
 main .main_banner .main_banner_item {
   display: flex;
   align-items: center;
   padding: 35px 33px;
-  background: #FFFFFF;
+  background: #ffffff;
   opacity: 0.9;
   border-radius: 20px;
   margin-bottom: 100px;
@@ -216,7 +218,9 @@ main .main_banner .main_banner_item p {
 }
 @media screen and (max-width: 767px) {
   main .main_banner .main_banner_item p {
-    font-size: calc(16px + 4 * ((100vw - 320px) / 960));
+    font-size: calc(
+    16px + 4 * ((100vw - 320px) / 960)
+  );
   }
 }
 @media screen and (max-width: 414px) {
@@ -225,7 +229,8 @@ main .main_banner .main_banner_item p {
   }
 }
 
-.btn, .btn-primary {
+.btn,
+.btn-primary {
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -233,16 +238,18 @@ main .main_banner .main_banner_item p {
   line-height: 150%;
   max-width: 260px;
   padding: 20px 48px;
-  background: linear-gradient(90deg, #4C6071 0%, #55BDEA 100%);
+  background: linear-gradient(90deg, #4c6071 0%, #55bdea 100%);
   box-shadow: 0 0 166px rgba(0, 0, 0, 0.2), 8px 8px 109px rgba(0, 0, 0, 0.05);
   border-radius: 10px;
   border-color: #5c5e5e;
 }
-.btn:hover, .btn-primary:hover {
+.btn:hover,
+.btn-primary:hover {
   border-color: #3e3c3c;
 }
 @media screen and (max-width: 414px) {
-  .btn, .btn-primary {
+  .btn,
+  .btn-primary {
     display: flex;
     justify-content: center;
     margin: auto;
@@ -304,7 +311,9 @@ main .main_banner .main_banner_item p {
 }
 @media screen and (max-width: 767px) {
   .about_us article h3 {
-    font-size: calc(20px + 4 * ((100vw - 320px) / 960));
+    font-size: calc(
+    20px + 4 * ((100vw - 320px) / 960)
+  );
   }
 }
 .about_us article p {
@@ -316,7 +325,9 @@ main .main_banner .main_banner_item p {
 }
 @media screen and (max-width: 767px) {
   .about_us article p {
-    font-size: calc(16px + 4 * ((100vw - 320px) / 960));
+    font-size: calc(
+    16px + 4 * ((100vw - 320px) / 960)
+  );
   }
 }
 .about_us article p strong {
@@ -363,7 +374,7 @@ main .main_banner .main_banner_item p {
   font-weight: 400;
   font-size: 24px;
   line-height: 130%;
-  color: #FFFFFF;
+  color: #ffffff;
   margin-left: 95px;
   margin-bottom: 70px;
 }
@@ -498,13 +509,15 @@ main .main_banner .main_banner_item p {
   color: #373737;
   margin: 0;
 }
-.portfolio .btn, .portfolio .btn-primary {
+.portfolio .btn,
+.portfolio .btn-primary {
   display: flex;
   margin: auto;
   font-weight: 300;
   border-color: #f5f5f5;
 }
-.portfolio .btn:hover, .portfolio .btn-primary:hover {
+.portfolio .btn:hover,
+.portfolio .btn-primary:hover {
   border-color: #3e3c3c;
 }
 .portfolio .owl-carousel .owl-nav {
@@ -560,8 +573,18 @@ main .main_banner .main_banner_item p {
   background-size: cover;
   padding: 60px 0;
 }
-.questions .question_title, .questions .question_body {
-  padding: 30px;
+@media screen and (max-width: 991px) {
+  .questions {
+    padding: 80px 0;
+  }
+}
+@media screen and (max-width: 991px) {
+  .questions .container {
+    padding: 0 25px;
+  }
+}
+.questions .question_title,
+.questions .question_body {
   background-color: white;
   border-radius: 20px;
 }
@@ -569,6 +592,7 @@ main .main_banner .main_banner_item p {
   margin-bottom: 10px;
 }
 .questions .question_title h3 {
+  padding: 30px;
   font-family: "Gothic A1", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -576,6 +600,19 @@ main .main_banner .main_banner_item p {
   line-height: 130%;
   max-width: 790px;
   margin: 0;
+}
+.questions .question_body {
+  padding: 30px;
+}
+@media screen and (max-width: 991px) {
+  .questions .question_body {
+    padding: 5px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .questions .question_body {
+    background: #4c6071;
+  }
 }
 .questions .question_body h4 {
   display: flex;
@@ -587,16 +624,50 @@ main .main_banner .main_banner_item p {
   line-height: 130%;
   margin-bottom: 20px;
 }
+@media screen and (max-width: 991px) {
+  .questions .question_body h4 {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    font-family: Roboto, sans-serif;
+    font-weight: 500;
+  }
+}
 .questions .question_body .question_item {
-  background: #4C6071;
+  background: #4c6071;
   border-radius: 30px;
   padding: 30px 30px 30px 30px;
   display: flex;
   justify-content: space-between;
 }
+@media screen and (max-width: 991px) {
+  .questions .question_body .question_item {
+    flex-wrap: wrap;
+    padding: 0;
+  }
+}
 .questions .question_body .question_item .wrapper {
-  width: 100%;
   margin-right: 30px;
+}
+@media screen and (max-width: 991px) {
+  .questions .question_body .question_item .wrapper {
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 991px) {
+  .questions .question_body .question_item .question_option_wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .questions .question_body .question_item .question_option_wrapper .question_option {
+    margin-bottom: 10px !important;
+  }
+}
+@media screen and (max-width: 576px) {
+  .questions .question_body .question_item .question_option_wrapper {
+    display: block;
+  }
 }
 .questions .question_body .question_item .question_option {
   display: flex;
@@ -608,6 +679,9 @@ main .main_banner .main_banner_item p {
 }
 .questions .question_body .question_item .question_option:not(:last-of-type) {
   margin-bottom: 10px;
+}
+.questions .question_body .question_item .question_option:last-of-type {
+  margin-bottom: 20px;
 }
 .questions .question_body .question_item .question_option input[type=radio] {
   -ms-transform: scale(1.5);
@@ -630,11 +704,15 @@ main .main_banner .main_banner_item p {
 .questions .question_body .question_item .question_option .text_option_2 {
   width: 100%;
 }
-.questions .question_body .question_item .question_option .tg-icon, .questions .question_body .question_item .question_option .vb-icon, .questions .question_body .question_item .question_option .em-icon {
+.questions .question_body .question_item .question_option .tg-icon,
+.questions .question_body .question_item .question_option .vb-icon,
+.questions .question_body .question_item .question_option .em-icon {
   display: flex;
   align-items: center;
 }
-.questions .question_body .question_item .question_option .tg-icon:before, .questions .question_body .question_item .question_option .vb-icon:before, .questions .question_body .question_item .question_option .em-icon:before {
+.questions .question_body .question_item .question_option .tg-icon:before,
+.questions .question_body .question_item .question_option .vb-icon:before,
+.questions .question_body .question_item .question_option .em-icon:before {
   content: "";
   display: inline-block;
   background-size: cover;
@@ -661,24 +739,37 @@ main .main_banner .main_banner_item p {
   line-height: 150%;
   max-width: 250px;
 }
+@media screen and (max-width: 991px) {
+  .questions .question_body .question_item .question_option label {
+    max-width: fit-content;
+  }
+}
+.questions .question_body .question_item .img_wrapper {
+  width: 100%;
+}
 .questions .question_body .question_item .img-fluid {
-  border-radius: 20px;
+  border-radius: 30px;
   overflow: hidden;
   margin-bottom: 10px;
 }
 .questions .question_body .question_item .img-fluid img {
   display: inherit;
-  width: fit-content;
 }
 .questions .question_body .question_item .btn_wrapper {
   height: 70px;
+}
+@media screen and (max-width: 991px) {
+  .questions .question_body .question_item .btn_wrapper {
+    display: none;
+  }
 }
 .questions .question_body .questions_result {
   position: absolute;
   top: 180px;
   right: 80px;
 }
-.questions .question_body .questions_result h3, .questions .question_body .questions_result p {
+.questions .question_body .questions_result h3,
+.questions .question_body .questions_result p {
   font-family: "Gothic A1", sans-serif;
   font-style: normal;
   font-weight: 900;
@@ -687,38 +778,32 @@ main .main_banner .main_banner_item p {
   text-align: center;
   color: white;
 }
-.questions .owl-nav {
-  position: absolute;
-  bottom: 60px;
-  right: 45px;
-  max-width: 610px;
-  width: 100%;
-}
-.questions .owl-carousel .owl-nav button.owl-prev, .questions .owl-carousel .owl-nav button.owl-next {
+.questions .owl-next,
+.questions .owl-prev {
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 300;
   font-size: 20px;
   line-height: 150%;
   padding: 20px 48px !important;
-  background: linear-gradient(90deg, #4C6071 0%, #55BDEA 100%);
+  background: linear-gradient(90deg, #4c6071 0%, #55bdea 100%);
   box-shadow: 0 0 166px rgba(0, 0, 0, 0.2), 8px 8px 109px rgba(0, 0, 0, 0.05);
   border-radius: 10px;
-  border-color: #5c5e5e;
+  border: none;
   color: white;
-  max-width: 290px;
+  max-width: 285px;
   width: 100%;
 }
-.questions .owl-carousel .owl-nav button.owl-prev.disabled, .questions .owl-carousel .owl-nav button.owl-next.disabled {
-  background: #8F8F8F;
+@media screen and (max-width: 991px) {
+  .questions .owl-next,
+  .questions .owl-prev {
+    max-width: none;
+  }
 }
-.questions .owl-carousel .owl-nav button.owl-prev {
-  position: relative;
-  right: 15px;
-}
-.questions .owl-carousel .owl-nav button.owl-next {
-  position: relative;
-  left: 15px;
+.questions button.owl-prev.disabled,
+.questions button.owl-next.disabled {
+  background: #8f8f8f;
+  pointer-events: none;
 }
 
 .catalog {
@@ -814,14 +899,16 @@ main .main_banner .main_banner_item p {
 .catalog .row .catalog_img img {
   width: 100%;
 }
-.catalog .btn, .catalog .btn-primary {
+.catalog .btn,
+.catalog .btn-primary {
   display: flex;
   margin: auto;
   font-weight: 300;
   max-width: 265px;
   border-color: white;
 }
-.catalog .btn:hover, .catalog .btn-primary:hover {
+.catalog .btn:hover,
+.catalog .btn-primary:hover {
   border-color: #3e3c3c;
 }
 

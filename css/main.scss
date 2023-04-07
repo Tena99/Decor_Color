@@ -14,7 +14,6 @@
   }
 }
 
-
 $maxWidth: 1280;
 
 @mixin adaptive-font($maxSize, $minSize) {
@@ -25,7 +24,9 @@ $maxWidth: 1280;
 @mixin adaptive-font-min($maxSize, $minSize) {
   $addSize: $maxSize - $minSize;
   $maxWidth: $maxWidth - 320;
-  font-size: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+  font-size: calc(
+    #{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth})
+  );
 }
 
 /* ------------------------------------------------------------------------------------------------------------------ */
@@ -36,10 +37,10 @@ $maxWidth: 1280;
   font-family: "Gothic A1";
   src: url("../fonts/GothicA1-Regular.eot");
   src: url("../fonts/GothicA1-Regular.eot?#iefix") format("embedded-opentype"),
-  url("../fonts/GothicA1-Regular.woff2") format("woff2"),
-  url("../fonts/GothicA1-Regular.woff") format("woff"),
-  url("../fonts/GothicA1-Regular.ttf") format("truetype"),
-  url("../fonts/GothicA1-Regular.svg#GothicA1-Regular") format("svg");
+    url("../fonts/GothicA1-Regular.woff2") format("woff2"),
+    url("../fonts/GothicA1-Regular.woff") format("woff"),
+    url("../fonts/GothicA1-Regular.ttf") format("truetype"),
+    url("../fonts/GothicA1-Regular.svg#GothicA1-Regular") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -49,10 +50,10 @@ $maxWidth: 1280;
   font-family: "Gothic A1";
   src: url("../fonts/GothicA1-SemiBold.eot");
   src: url("../fonts/GothicA1-SemiBold.eot?#iefix") format("embedded-opentype"),
-  url("../fonts/GothicA1-SemiBold.woff2") format("woff2"),
-  url("../fonts/GothicA1-SemiBold.woff") format("woff"),
-  url("../fonts/GothicA1-SemiBold.ttf") format("truetype"),
-  url("../fonts/GothicA1-SemiBold.svg#GothicA1-SemiBold") format("svg");
+    url("../fonts/GothicA1-SemiBold.woff2") format("woff2"),
+    url("../fonts/GothicA1-SemiBold.woff") format("woff"),
+    url("../fonts/GothicA1-SemiBold.ttf") format("truetype"),
+    url("../fonts/GothicA1-SemiBold.svg#GothicA1-SemiBold") format("svg");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -62,10 +63,10 @@ $maxWidth: 1280;
   font-family: "Roboto";
   src: url("../fonts/Roboto-Regular.eot");
   src: url("../fonts/Roboto-Regular.eot?#iefix") format("embedded-opentype"),
-  url("../fonts/Roboto-Regular.woff2") format("woff2"),
-  url("../fonts/Roboto-Regular.woff") format("woff"),
-  url("../fonts/Roboto-Regular.ttf") format("truetype"),
-  url("../fonts/Roboto-Regular.svg#Roboto-Regular") format("svg");
+    url("../fonts/Roboto-Regular.woff2") format("woff2"),
+    url("../fonts/Roboto-Regular.woff") format("woff"),
+    url("../fonts/Roboto-Regular.ttf") format("truetype"),
+    url("../fonts/Roboto-Regular.svg#Roboto-Regular") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -75,10 +76,10 @@ $maxWidth: 1280;
   font-family: "Roboto";
   src: url("../fonts/Roboto-Light.eot");
   src: url("../fonts/Roboto-Light.eot?#iefix") format("embedded-opentype"),
-  url("../fonts/Roboto-Light.woff2") format("woff2"),
-  url("../fonts/Roboto-Light.woff") format("woff"),
-  url("../fonts/Roboto-Light.ttf") format("truetype"),
-  url("../fonts/Roboto-Light.svg#Roboto-Light") format("svg");
+    url("../fonts/Roboto-Light.woff2") format("woff2"),
+    url("../fonts/Roboto-Light.woff") format("woff"),
+    url("../fonts/Roboto-Light.ttf") format("truetype"),
+    url("../fonts/Roboto-Light.svg#Roboto-Light") format("svg");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -88,10 +89,10 @@ $maxWidth: 1280;
   font-family: "Roboto";
   src: url("../fonts/Roboto-Medium.eot");
   src: url("../fonts/Roboto-Medium.eot?#iefix") format("embedded-opentype"),
-  url("../fonts/Roboto-Medium.woff2") format("woff2"),
-  url("../fonts/Roboto-Medium.woff") format("woff"),
-  url("../fonts/Roboto-Medium.ttf") format("truetype"),
-  url("../fonts/Roboto-Medium.svg#Roboto-Medium") format("svg");
+    url("../fonts/Roboto-Medium.woff2") format("woff2"),
+    url("../fonts/Roboto-Medium.woff") format("woff"),
+    url("../fonts/Roboto-Medium.ttf") format("truetype"),
+    url("../fonts/Roboto-Medium.svg#Roboto-Medium") format("svg");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -100,11 +101,12 @@ $maxWidth: 1280;
 @font-face {
   font-family: "Montserrat";
   src: url("../fonts/Montserrat-SemiBold.eot");
-  src: url("../fonts/Montserrat-SemiBold.eot?#iefix") format("embedded-opentype"),
-  url("../fonts/Montserrat-SemiBold.woff2") format("woff2"),
-  url("../fonts/Montserrat-SemiBold.woff") format("woff"),
-  url("../fonts/Montserrat-SemiBold.ttf") format("truetype"),
-  url("../fonts/Montserrat-SemiBold.svg#Montserrat-SemiBold") format("svg");
+  src: url("../fonts/Montserrat-SemiBold.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/Montserrat-SemiBold.woff2") format("woff2"),
+    url("../fonts/Montserrat-SemiBold.woff") format("woff"),
+    url("../fonts/Montserrat-SemiBold.ttf") format("truetype"),
+    url("../fonts/Montserrat-SemiBold.svg#Montserrat-SemiBold") format("svg");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -161,7 +163,6 @@ header {
       padding: 0;
     }
 
-
     ul {
       display: flex;
       list-style: none;
@@ -175,12 +176,12 @@ header {
         padding: 10px;
 
         @include max-screen(992px) {
-          padding: 5px
+          padding: 5px;
         }
 
         a {
           &:hover {
-            color: #56BCE8;
+            color: #56bce8;
             text-decoration: underline;
           }
         }
@@ -247,18 +248,18 @@ main {
     padding-bottom: 34px;
 
     h1 {
-      font-family: 'Gothic A1', sans-serif;
+      font-family: "Gothic A1", sans-serif;
       font-style: normal;
       font-weight: 600;
       line-height: 130%;
-      color: #FFFFFF;
+      color: #ffffff;
       text-shadow: 0px 0px 166px #000000;
       margin-top: 160px;
       margin-bottom: 30px;
       @include adaptive-font(56, 28);
 
       @include max-screen(767px) {
-        @include adaptive-font-min(56, 28)
+        @include adaptive-font-min(56, 28);
       }
     }
 
@@ -266,7 +267,7 @@ main {
       display: flex;
       align-items: center;
       padding: 35px 33px;
-      background: #FFFFFF;
+      background: #ffffff;
       opacity: 0.9;
       border-radius: 20px;
       margin-bottom: 100px;
@@ -281,7 +282,7 @@ main {
       }
 
       p {
-        font-family: 'Roboto', sans-serif;
+        font-family: "Roboto", sans-serif;
         font-style: normal;
         font-weight: 500;
         line-height: 150%;
@@ -292,10 +293,9 @@ main {
         @include adaptive-font(20, 16);
 
         @include max-screen(767px) {
-          @include adaptive-font-min(20, 16)
+          @include adaptive-font-min(20, 16);
         }
       }
-
     }
 
     @include max-screen(414px) {
@@ -304,15 +304,16 @@ main {
   }
 }
 
-.btn, .btn-primary {
-  font-family: 'Roboto', sans-serif;
+.btn,
+.btn-primary {
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
   line-height: 150%;
   max-width: 260px;
   padding: 20px 48px;
-  background: linear-gradient(90deg, #4C6071 0%, #55BDEA 100%);
+  background: linear-gradient(90deg, #4c6071 0%, #55bdea 100%);
   box-shadow: 0 0 166px rgba(0, 0, 0, 0.2), 8px 8px 109px rgba(0, 0, 0, 0.05);
   border-radius: 10px;
   border-color: #5c5e5e;
@@ -327,7 +328,6 @@ main {
     margin: auto;
   }
 }
-
 
 //----------------------------------------------------------------------------------------------------------------------------------------//
 // About us
@@ -371,7 +371,7 @@ main {
     }
 
     h3 {
-      font-family: 'Gothic A1', sans-serif;
+      font-family: "Gothic A1", sans-serif;
       font-style: normal;
       font-weight: 400;
       line-height: 130%;
@@ -383,19 +383,19 @@ main {
       }
 
       @include max-screen(767px) {
-        @include adaptive-font-min(24, 20)
+        @include adaptive-font-min(24, 20);
       }
     }
 
     p {
-      font-family: 'Roboto', sans-serif;
+      font-family: "Roboto", sans-serif;
       font-style: normal;
       font-weight: 300;
       line-height: 150%;
       @include adaptive-font(20, 16);
 
       @include max-screen(767px) {
-        @include adaptive-font-min(20, 16)
+        @include adaptive-font-min(20, 16);
       }
 
       strong {
@@ -428,7 +428,6 @@ main {
 // Why us
 // ---------------------------------------------------------------------------------------------------------------------------------------//
 
-
 .why_us {
   background-image: url(../images/why_us_background.png);
   background-size: cover;
@@ -444,14 +443,13 @@ main {
     }
   }
 
-
   h3 {
-    font-family: 'Gothic A1', sans-serif;
+    font-family: "Gothic A1", sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 24px;
     line-height: 130%;
-    color: #FFFFFF;
+    color: #ffffff;
     margin-left: 95px;
     margin-bottom: 70px;
 
@@ -477,12 +475,12 @@ main {
 
       img {
         display: block;
-        width: 100%
+        width: 100%;
       }
     }
 
     h4 {
-      font-family: 'Roboto', sans-serif;
+      font-family: "Roboto", sans-serif;
       font-style: normal;
       font-weight: 500;
       font-size: 16px;
@@ -492,13 +490,13 @@ main {
     }
 
     p {
-      font-family: 'Roboto', sans-serif;
+      font-family: "Roboto", sans-serif;
       font-style: normal;
       font-weight: 300;
       font-size: 16px;
       line-height: 150%;
       color: #373737;
-      margin: 0
+      margin: 0;
     }
   }
 }
@@ -530,7 +528,7 @@ main {
   }
 
   h3 {
-    font-family: 'Gothic A1', sans-serif;
+    font-family: "Gothic A1", sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 24px;
@@ -548,7 +546,7 @@ main {
     }
 
     @include max-screen(320px) {
-      margin-left: 0
+      margin-left: 0;
     }
   }
 
@@ -567,7 +565,7 @@ main {
       }
 
       h4 {
-        font-family: 'Roboto', sans-serif;
+        font-family: "Roboto", sans-serif;
         font-style: normal;
         font-weight: 500;
         font-size: 16px;
@@ -577,7 +575,7 @@ main {
       }
 
       p {
-        font-family: 'Roboto', sans-serif;
+        font-family: "Roboto", sans-serif;
         font-style: normal;
         font-weight: 300;
         font-size: 16px;
@@ -588,7 +586,8 @@ main {
     }
   }
 
-  .btn, .btn-primary {
+  .btn,
+  .btn-primary {
     display: flex;
     margin: auto;
     font-weight: 300;
@@ -655,8 +654,18 @@ main {
   background-size: cover;
   padding: 60px 0;
 
-  .question_title, .question_body {
-    padding: 30px;
+  @include max-screen(991px) {
+    padding: 80px 0;
+  }
+
+  .container {
+    @include max-screen(991px) {
+      padding: 0 25px;
+    }
+  }
+
+  .question_title,
+  .question_body {
     background-color: white;
     border-radius: 20px;
   }
@@ -665,41 +674,81 @@ main {
     margin-bottom: 10px;
 
     h3 {
-      font-family: 'Gothic A1', sans-serif;
+      padding: 30px;
+      font-family: "Gothic A1", sans-serif;
       font-style: normal;
       font-weight: 400;
       font-size: 24px;
       line-height: 130%;
       max-width: 790px;
-      margin: 0
+      margin: 0;
     }
   }
 
-
   .question_body {
+    padding: 30px;
+
+    @include max-screen(991px) {
+      padding: 5px;
+    }
+
+    @include max-screen(991px) {
+      background: #4c6071;
+    }
 
     h4 {
       display: flex;
       justify-content: space-between;
-      font-family: 'Gothic A1', sans-serif;
+      font-family: "Gothic A1", sans-serif;
       font-style: normal;
       font-weight: 400;
       font-size: 24px;
       line-height: 130%;
       margin-bottom: 20px;
+
+      @include max-screen(991px) {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        font-family: Roboto, sans-serif;
+        font-weight: 500;
+      }
     }
 
     .question_item {
-      background: #4C6071;
+      background: #4c6071;
       border-radius: 30px;
       padding: 30px 30px 30px 30px;
-
       display: flex;
       justify-content: space-between;
 
+      @include max-screen(991px) {
+        flex-wrap: wrap;
+        padding: 0;
+      }
+
       .wrapper {
-        width: 100%;
+        //width: 100%;
         margin-right: 30px;
+
+        @include max-screen(991px) {
+          margin-right: 0;
+        }
+      }
+
+      .question_option_wrapper {
+        @include max-screen(991px) {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          .question_option {
+            margin-bottom: 10px !important;
+          }
+        }
+        @include max-screen(576px) {
+          display: block;
+        }
       }
 
       .question_option {
@@ -714,13 +763,17 @@ main {
           margin-bottom: 10px;
         }
 
+        &:last-of-type {
+          margin-bottom: 20px;
+        }
+
         input[type="radio"] {
           -ms-transform: scale(1.5);
           transform: scale(1.5);
         }
 
         input[type="text"] {
-          font-family: 'Roboto', sans-serif;
+          font-family: "Roboto", sans-serif;
           font-style: normal;
           font-weight: 300;
           font-size: 16px;
@@ -739,7 +792,9 @@ main {
           width: 100%;
         }
 
-        .tg-icon, .vb-icon, .em-icon {
+        .tg-icon,
+        .vb-icon,
+        .em-icon {
           display: flex;
           align-items: center;
 
@@ -774,29 +829,40 @@ main {
         }
 
         label {
-          font-family: 'Roboto', sans-serif;
+          font-family: "Roboto", sans-serif;
           font-style: normal;
           font-weight: 400;
           font-size: 20px;
           line-height: 150%;
           max-width: 250px;
+
+          @include max-screen(991px) {
+            max-width: fit-content;
+          }
         }
       }
 
+      .img_wrapper {
+        width: 100%;
+      }
 
       .img-fluid {
-        border-radius: 20px;
+        border-radius: 30px;
         overflow: hidden;
         margin-bottom: 10px;
 
         img {
           display: inherit;
-          width: fit-content;
+          //width: fit-content;
         }
       }
 
       .btn_wrapper {
         height: 70px;
+
+        @include max-screen(991px) {
+          display: none;
+        }
       }
     }
 
@@ -805,8 +871,9 @@ main {
       top: 180px;
       right: 80px;
 
-      h3, p {
-        font-family: 'Gothic A1', sans-serif;
+      h3,
+      p {
+        font-family: "Gothic A1", sans-serif;
         font-style: normal;
         font-weight: 900;
         font-size: 39px;
@@ -817,42 +884,31 @@ main {
     }
   }
 
-  .owl-nav {
-    position: absolute;
-    bottom: 60px;
-    right: 45px;
-    max-width: 610px;
-    width: 100%;
-  }
-
-  .owl-carousel .owl-nav button.owl-prev, .owl-carousel .owl-nav button.owl-next {
+  .owl-next,
+  .owl-prev {
     font-family: "Roboto", sans-serif;
     font-style: normal;
     font-weight: 300;
     font-size: 20px;
     line-height: 150%;
     padding: 20px 48px !important;
-    background: linear-gradient(90deg, #4C6071 0%, #55BDEA 100%);
+    background: linear-gradient(90deg, #4c6071 0%, #55bdea 100%);
     box-shadow: 0 0 166px rgb(0 0 0 / 20%), 8px 8px 109px rgb(0 0 0 / 5%);
     border-radius: 10px;
-    border-color: #5c5e5e;
+    border: none;
     color: white;
-    max-width: 290px;
+    max-width: 285px;
     width: 100%;
+
+    @include max-screen(991px) {
+      max-width: none;
+    }
   }
 
-  .owl-carousel .owl-nav button.owl-prev.disabled, .owl-carousel .owl-nav button.owl-next.disabled {
-    background: #8F8F8F;
-  }
-
-  .owl-carousel .owl-nav button.owl-prev {
-    position: relative;
-    right: 15px;
-  }
-
-  .owl-carousel .owl-nav button.owl-next {
-    position: relative;
-    left: 15px;
+  button.owl-prev.disabled,
+  button.owl-next.disabled {
+    background: #8f8f8f;
+    pointer-events: none;
   }
 }
 
@@ -872,37 +928,37 @@ main {
   }
 
   .bkg {
-    margin-bottom:225px;
+    margin-bottom: 225px;
 
     @include max-screen(992px) {
-      margin-bottom:195px;
+      margin-bottom: 195px;
     }
 
     @include max-screen(768px) {
-      margin-bottom:175px;
+      margin-bottom: 175px;
     }
 
     @include max-screen(576px) {
-      margin-bottom:155px;
+      margin-bottom: 155px;
     }
 
     @include max-screen(414px) {
-      margin-bottom:135px;
+      margin-bottom: 135px;
     }
 
     @include max-screen(320px) {
-      margin-bottom:115px;
+      margin-bottom: 115px;
     }
   }
 
   .img-fluid {
     img {
-        width: 100%;
+      width: 100%;
     }
   }
 
   h3 {
-    font-family: 'Gothic A1', sans-serif;
+    font-family: "Gothic A1", sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 24px;
@@ -920,9 +976,8 @@ main {
       margin-bottom: 40px;
 
       @include max-screen(576px) {
-     justify-content: center;
+        justify-content: center;
       }
-
     }
 
     &:last-of-type {
@@ -934,7 +989,7 @@ main {
     }
 
     h5 {
-      font-family: 'Roboto', sans-serif;
+      font-family: "Roboto", sans-serif;
       font-style: normal;
       font-weight: 500;
       font-size: 16px;
@@ -951,7 +1006,8 @@ main {
     }
   }
 
-  .btn, .btn-primary {
+  .btn,
+  .btn-primary {
     display: flex;
     margin: auto;
     font-weight: 300;
