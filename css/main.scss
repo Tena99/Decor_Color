@@ -122,7 +122,6 @@ $maxWidth: 1280;
 }
 
 .container {
-  max-width: 1200px;
   margin: auto;
   padding: 0 15px;
 }
@@ -1072,6 +1071,75 @@ main {
 
     &:hover {
       border-color: #3e3c3c;
+    }
+  }
+}
+
+.video_feedback {
+  background-image: url("../images/video_feedback_background.png");
+  background-size: cover;
+  padding: 60px 0 95px;
+
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    max-width: 922px;
+    margin-bottom: 85px;
+    margin-right: auto;
+    margin-left: auto;
+
+    h3 {
+      font-family: "Gothic A1", sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 130%;
+      color: #ffffff;
+    }
+
+    .image_wrapper {
+      span {
+        &:first-of-type {
+          margin-right: 15px;
+        }
+
+        &:last-of-type {
+          margin-left: 15px;
+        }
+      }
+    }
+  }
+
+  .video_feedback_carousel {
+    display: flex;
+
+    h4 {
+      font-family: "Roboto", sans-serif;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 150%;
+      color: #ffffff;
+    }
+
+    p {
+      font-family: "Roboto", sans-serif;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 150%;
+      color: #ffffff;
+    }
+
+    .img-fluid {
+      img {
+        border-radius: 25px;
+        overflow: hidden;
+
+        @include max-screen(575px) {
+          border-radius: 45px;
+        }
+      }
     }
   }
 }

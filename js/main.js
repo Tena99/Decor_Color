@@ -29,6 +29,30 @@ $(document).ready(function () {
   });
 });
 
+$(document).ready(function () {
+  $(".owl-three").owlCarousel({
+    items: 1,
+    nav: false,
+    dots: false,
+    loop: true,
+    margin: 30,
+
+    responsive: {
+      992: {
+        items: 4,
+      },
+
+      768: {
+        items: 3,
+      },
+
+      575: {
+        items: 2,
+      },
+    },
+  });
+});
+
 $(".owl-prev").click(function (event) {
   event.preventDefault();
   $(".owl-carousel").trigger("prev.owl.carousel");
