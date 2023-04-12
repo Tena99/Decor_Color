@@ -1132,12 +1132,27 @@ main {
     }
 
     .img-fluid {
+      position: relative;
+
       img {
-        border-radius: 25px;
+        border-radius: 30px;
         overflow: hidden;
 
         @include max-screen(575px) {
           border-radius: 45px;
+        }
+      }
+
+      .play_icon {
+        position: absolute;
+        height: 81px;
+        top: 110px;
+        right: 0;
+        transition: 1s;
+
+        &:hover {
+          transform: scale(1.5);
+          transition: 1s;
         }
       }
     }

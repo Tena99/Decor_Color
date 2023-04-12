@@ -1019,14 +1019,28 @@ main .main_banner .main_banner_item p {
   line-height: 150%;
   color: #ffffff;
 }
+.video_feedback .video_feedback_carousel .img-fluid {
+  position: relative;
+}
 .video_feedback .video_feedback_carousel .img-fluid img {
-  border-radius: 25px;
+  border-radius: 30px;
   overflow: hidden;
 }
 @media screen and (max-width: 575px) {
   .video_feedback .video_feedback_carousel .img-fluid img {
     border-radius: 45px;
   }
+}
+.video_feedback .video_feedback_carousel .img-fluid .play_icon {
+  position: absolute;
+  height: 81px;
+  top: 110px;
+  right: 0;
+  transition: 1s;
+}
+.video_feedback .video_feedback_carousel .img-fluid .play_icon:hover {
+  transform: scale(1.5);
+  transition: 1s;
 }
 
 /*# sourceMappingURL=main.css.map */
